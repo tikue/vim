@@ -12,6 +12,7 @@ set ruler
 set incsearch
 set ignorecase
 set smartcase
+set backspace=2
 
 set colorcolumn=100
 set cursorline
