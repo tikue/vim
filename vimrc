@@ -22,16 +22,26 @@ colorscheme github
 
 set clipboard=unnamed
 
-" Changing cursor shape per mode
-" 1/0 -> blinking block
-" 2   -> solid block
-" 3   -> blinking underscore
-" 4   -> solid underscore
-if exists('$TMUX')
-    " tmux will only forward escape sequences to the terminal
-    let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+if has("win32")
+    colorscheme solarized
+    if has("gui_running")
+        set background=dark
+    endif
 else
-    let &t_SI .= "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI .= "\<Esc>]50;CursorShape=0\x7"
+    set background=light
+    colorscheme github
+
+    " Changing cursor shape per mode
+    " 1/0 -> blinking block
+    " 2   -> solid block
+    " 3   -> blinking underscore
+    " 4   -> solid underscore
+    if exists('$TMUX')
+        " tmux will only forward escape sequences to the terminal
+        let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+        let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+    else
+        let &t_SI .= "\<Esc>]50;CursorShape=1\x7"
+        let &t_EI .= "\<Esc>]50;CursorShape=0\x7"
+    endif
 endif
