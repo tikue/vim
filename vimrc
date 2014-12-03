@@ -16,8 +16,11 @@ set smartcase
 set backspace=2
 
 set cursorline
+set colorcolumn=100
 set background=light
 colorscheme github
+
+set clipboard=unnamed
 
 " Changing cursor shape per mode
 " 1/0 -> blinking block
