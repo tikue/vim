@@ -28,8 +28,8 @@ if has("win32")
         set background=dark
     endif
 else
-    set background=light
-    colorscheme github
+    set background=dark
+    colorscheme solarized
 
     " Changing cursor shape per mode
     " 1/0 -> blinking block
