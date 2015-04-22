@@ -10,6 +10,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = git@github.com:elzr/vim-json
-[submodule "bundle/mine/ftplugin/rust.vim"]
-	path = bundle/mine/ftplugin/rust.vim
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
 	url = git@github.com:rust-lang/rust.vim
