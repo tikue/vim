@@ -2,6 +2,9 @@ execute pathogen#infect()
 call pathogen#incubate()
 call pathogen#helptags()
 
+set hidden
+let g:racer_cmd = "/Users/tim/Documents/rust/racer/target/release/racer"
+let $RUST_SRC_PATH="/Users/tim/Documents/rust/rust/src/"
 syntax on
 filetype plugin indent on
 set tabstop=4
