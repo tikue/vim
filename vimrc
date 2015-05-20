@@ -1,6 +1,20 @@
-execute pathogen#infect()
-call pathogen#incubate()
-call pathogen#helptags()
+set nocompatible " required for Vundle
+filetype off     " required for Vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle; required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'elzr/vim-json'
+
+" All Vundle plugins must go above this line
+call vundle#end()         " required for Vundle
+filetype plugin indent on " required for Vundle
 
 set hidden
 let g:racer_cmd = "/Users/tim/Documents/rust/racer/target/release/racer"
