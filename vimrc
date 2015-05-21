@@ -16,6 +16,7 @@ Plugin 'elzr/vim-json'
 call vundle#end()         " required for Vundle
 filetype plugin indent on " required for Vundle
 
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 set hidden
 let g:racer_cmd = "/Users/tim/Documents/rust/racer/target/release/racer"
 let $RUST_SRC_PATH="/Users/tim/Documents/rust/rust/src/"
