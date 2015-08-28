@@ -36,18 +36,17 @@ set backspace=2
 set cursorline
 set colorcolumn=100
 set background=light
-colorscheme github
 
 set clipboard=unnamed
 
+colorscheme solarized
+
 if has("win32")
-    colorscheme solarized
     if has("gui_running")
         set background=dark
     endif
 else
     set background=dark
-    colorscheme solarized
 
     " Changing cursor shape per mode
     " 1/0 -> blinking block
