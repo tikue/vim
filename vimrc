@@ -37,6 +37,7 @@ set cursorline
 set colorcolumn=100
 hi ColorColumn ctermbg=lightblue guibg=lightblue
 set background=dark
+set t_Co=256
 
 set clipboard=unnamed
 
