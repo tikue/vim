@@ -11,6 +11,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'elzr/vim-json'
+Plugin 'valloric/YouCompleteMe'
 
 " All Vundle plugins must go above this line
 call vundle#end()         " required for Vundle
@@ -18,8 +19,12 @@ filetype plugin indent on " required for Vundle
 
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 set hidden
-let g:racer_cmd = "/Users/tim/Documents/rust/racer/target/release/racer"
-let $RUST_SRC_PATH="/Users/tim/Documents/rust/rust/src/"
+
+" Used by YouCompleteMe to find rustc source code
+let g:ycm_rust_src_path = '/Users/tim/Documents/rust/rust/src'
+let g:rustc_path =  '/Users/tim/Documents/rust/rust/src'
+nnoremap gd :YcmCompleter GoTo<CR>
+
 syntax on
 filetype plugin indent on
 set tabstop=4
