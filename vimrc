@@ -12,6 +12,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'elzr/vim-json'
 Plugin 'valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All Vundle plugins must go above this line
 call vundle#end()         " required for Vundle
@@ -23,10 +24,15 @@ set hidden
 " Used by YouCompleteMe to find rustc source code
 let g:ycm_rust_src_path = '/Users/tim/Documents/rust/rust/src'
 let g:rustc_path =  '/Users/tim/Documents/rust/rust/src'
+let g:ctrlp_root_markers = ['.git']
+set wildignore+=*/target/*
+nnoremap <Leader>b :CtrlPBuffer<cr>
+nnoremap <Leader>e :CtrlP<cr>
 nnoremap gd :YcmCompleter GoTo<CR>
 
 syntax on
 filetype plugin indent on
+set tw=100 " text width, for reflow
 set tabstop=4
 set shiftwidth=4
 set expandtab
