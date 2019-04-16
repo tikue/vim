@@ -8,10 +8,8 @@ call vundle#begin()
 " let Vundle manage Vundle; required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'elzr/vim-json'
-Plugin 'valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " All Vundle plugins must go above this line
@@ -22,8 +20,6 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 set hidden
 
 " Used by YouCompleteMe to find rustc source code
-let g:ycm_rust_src_path = '/Users/tim/Documents/rust/rust/src'
-let g:rustc_path =  '/Users/tim/Documents/rust/rust/src'
 let g:ctrlp_root_markers = ['.git']
 set wildignore+=*/target/*
 nnoremap <Leader>b :CtrlPBuffer<cr>
@@ -47,12 +43,12 @@ set backspace=2
 set cursorline
 set colorcolumn=100
 hi ColorColumn ctermbg=lightblue guibg=lightblue
-set background=dark
 set t_Co=256
 
 set clipboard=unnamed
 
-colorscheme solarized
+set background=dark
+colorscheme solarized8_dark
 
 if !has("win32")
     " Changing cursor shape per mode
