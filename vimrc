@@ -19,12 +19,10 @@ filetype plugin indent on " required for Vundle
 autocmd FileType xml setlocal shiftwidth=2 tabstop=2
 set hidden
 
-" Used by YouCompleteMe to find rustc source code
 let g:ctrlp_root_markers = ['.git']
 set wildignore+=*/target/*
 nnoremap <Leader>b :CtrlPBuffer<cr>
 nnoremap <Leader>e :CtrlP<cr>
-nnoremap gd :YcmCompleter GoTo<CR>
 
 syntax on
 filetype plugin indent on
